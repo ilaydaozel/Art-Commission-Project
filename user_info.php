@@ -43,7 +43,7 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 	else{ 
 		$address_update= mysqli_query($con, "UPDATE information SET address='$new_address' WHERE id='$user_id'");
 		if(mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$user_id'")){
-			$order_address_update= mysqli_query($con, "UPDATE order_information SET customer_address='$new_' WHERE customer_id='$user_id'");
+			$order_address_update= mysqli_query($con, "UPDATE order_information SET customer_address='$new_address' WHERE customer_id='$user_id'");
 		}
 		$user_array['address']=$new_address;
 		$_SESSION["Authenticated"]['address']=$new_address;
