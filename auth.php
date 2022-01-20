@@ -9,7 +9,7 @@ extract($_REQUEST, EXTR_SKIP);
 
 	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
 	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
-$user_check= mysqli_query($con, "SELECT * FROM information WHERE email='$email' and password='$password'");
+	$user_check= mysqli_query($con, "SELECT * FROM information WHERE email='$email' AND password='$password'");
 
 if (isset($_POST["login"])){
 	if ((isset($_POST["email"])) && (isset($_POST["password"]) ) && mysqli_num_rows($user_check)){
