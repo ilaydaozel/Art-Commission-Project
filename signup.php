@@ -10,7 +10,7 @@
 ?>
 
 <html><head><title>Sign up</title>
-<body><div align="center">
+<body><div >
 <?php include("header.inc");
 
 $name="";
@@ -92,7 +92,7 @@ function validate_input(){
 function display_form(){
 	global $errors;
 	?>
-
+	<center>
 	<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 	<div style="background-color:#d6ccc2; width:50%; height:7%;" > 
 	 <font size="+2"> NAME:</font>
