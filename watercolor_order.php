@@ -22,8 +22,6 @@
 			$error_message['person_amount']="PLEASE CHOOSE THE PERSON AMOUNT!";
 		}
 	}
-?>
-<?php
  
 	if(!array_key_exists("picture",$error_message)){
 		$file_name=$_FILES['picture_file']['name'];

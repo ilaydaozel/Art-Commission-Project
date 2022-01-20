@@ -18,8 +18,8 @@
 		mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 		$user_delete= mysqli_query($con, "DELETE FROM information WHERE id='$user_id'");
-		mysqli_close($con);
 		session_destroy();
+		mysqli_close($con);
 			
 }	
 ?>
