@@ -22,15 +22,12 @@
 			$error_message['person_amount']="PLEASE CHOOSE THE PERSON AMOUNT!";
 		}
 	}
-?>
-<?php
- 
+
 	if(!array_key_exists("picture",$error_message)){
 		$file_name=$_FILES['picture_file']['name'];
 		$directory='order_photos/';
 		$upload_file = $directory . $file_name;
 	
-
 		if (move_uploaded_file($_FILES['picture_file']['tmp_name'],$upload_file)){
 
 ?>
@@ -41,7 +38,11 @@
 </br>
 <?php
     }
-}?>
+	else{
+		echo "Couldn't upload the photo";
+	}
+	}
+	?>
 </br>
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 
 <font size="+3"> MEDIUM: Watercolor </font></br></br>
@@ -93,8 +94,7 @@ foreach( $error_message as $error){?>
 	 $customer_surname=$user['surname'];
 	 $customer_address=$user['address'];
 	 $customer_email=$user['email'];
-	 $file_add= "order_photos/".$file_name;
-     $order=array("customer_id"=>$customer_id, "art_medium"=>'pencil', "photo"=>$file_add, "paper_size"=>$paper_size, "person_amount"=>$person_amount, "comment"=>$comment, "price"=>$price, "customer_name"=>$customer_name, "customer_surname"=>$customer_surname, "customer_address"=>$customer_address,"customer_email"=>$customer_email);
+     $order=array("customer_id"=>$customer_id, "art_medium"=>'pencil', "photo"=>$file_name, "paper_size"=>$paper_size, "person_amount"=>$person_amount, "comment"=>$comment, "price"=>$price, "customer_name"=>$customer_name, "customer_surname"=>$customer_surname, "customer_address"=>$customer_address,"customer_email"=>$customer_email);
 	 $_SESSION['Order']=$order;
 
 	 ?>

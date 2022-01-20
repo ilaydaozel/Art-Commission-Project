@@ -38,6 +38,9 @@
 </br>
 <?php
     }
+	else{
+		echo "Couldn't upload the photo";
+	}
 }?>
 </br>
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 
@@ -91,8 +94,7 @@ foreach( $error_message as $error){?>
 	 $customer_address=$user['address'];
 	 $customer_email=$user['email'];
 	 $comment=trim(stripslashes($_POST['comment']));
-	 $file_add= "order_photos/".$file_name;
-	 $order=array("customer_id"=>$customer_id, "art_medium"=>'watercolor', "photo"=>$file_add, "paper_size"=>$paper_size, "person_amount"=>$person_amount, "comment"=>$comment, "price"=>$price, "customer_name"=>$customer_name, "customer_surname"=>$customer_surname, "customer_address"=>$customer_address,"customer_email"=>$customer_email);
+	 $order=array("customer_id"=>$customer_id, "art_medium"=>'watercolor', "photo"=>$file_name, "paper_size"=>$paper_size, "person_amount"=>$person_amount, "comment"=>$comment, "price"=>$price, "customer_name"=>$customer_name, "customer_surname"=>$customer_surname, "customer_address"=>$customer_address,"customer_email"=>$customer_email);
 	 $_SESSION['Order']=$order;
 
 	 ?>
