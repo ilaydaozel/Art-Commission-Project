@@ -2,6 +2,8 @@
 session_start();
 
 extract($_REQUEST, EXTR_SKIP);
+
+
 $host= 'eu-cdbr-west-02.cleardb.net';
 $username= 'b893d69c34f150';
 $password= '551cfc91';
@@ -15,14 +17,13 @@ if (isset($_POST["login"])){
 		$user_record = mysqli_fetch_row( $user_check );
 		$user_array=array("id"=>$user_record[0], "name"=>$user_record[1],"surname"=>$user_record[2],"address"=>$user_record[3],"email"=>$user_record[4],"password"=>$user_record[5]);
 		$_SESSION["Authenticated"] = $user_array;
-		header("Location: home.php");
 }
 	else{
 		$_SESSION["Authenticated"] = 0;
-		header("Location: login.php");
+
 }
 	session_write_close();
-
+	header("Location: loggedin.php");
 	}
 
 	if (isset($_GET["logout"])){
