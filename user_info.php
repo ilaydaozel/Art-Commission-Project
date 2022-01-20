@@ -29,8 +29,8 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 	}	
 	else{ 
 		$mail_update= mysqli_query($con, "UPDATE information SET email='$new_email' WHERE id='$user_id'");
-		$check=mysqli_query($con, "SELECT * FROM customer_information WHERE customer_id='$user_id'")
-		if(mysqli_fetch_row($check)){
+		$check=mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$user_id'")
+		if(mysqli_num_rows($check)){
 			$order_mail_update= mysqli_query($con, "UPDATE order_information SET customer_email='$new_email' WHERE customer_id='$user_id'");
 		}
 		$user_array['email']=$new_email;
@@ -43,8 +43,9 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 	}	
 	else{ 
 		$address_update= mysqli_query($con, "UPDATE information SET address='$new_address' WHERE id='$user_id'");
-		if(mysqli_query($con, "SELECT * FROM customer_information WHERE customer_id='$user_id'")){
-			$order_address_update= mysqli_query($con, "UPDATE order_information SET customer_address='$new_' WHERE customer_id='$user_id'");
+		$check=mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$user_id'")
+		if(mysqli_num_rows($check)){
+			$order_mail_update= mysqli_query($con, "UPDATE order_information SET customer_email='$new_email' WHERE customer_id='$user_id'");
 		}
 		$user_array['address']=$new_address;
 		$_SESSION["Authenticated"]['address']=$new_address;
