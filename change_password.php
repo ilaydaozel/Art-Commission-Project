@@ -66,12 +66,12 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 	<br />
 	<br/>
 	<div style="background-color:#ebfbff; width:50%; height:25%;" > 
-	 <font size="+2"> ENTER NEW PASSWORD:  <br /><br />
+	 <font size="+2"> ENTER NEW PASSWORD:  <br /><br /></font>
     <font size='2px'>(*Your password should be at least 5 characters long)</font>
-	<br/>
-	<?php if ( isset($_POST['submit'])) echo $new_password_message; ?></br>
+	<br/><font color='green'>
+	<?php if ( isset($_POST['submit'])) echo $new_password_message; ?></br></font>
 	<input type="password" name="new_password">
-	</font></div>
+	</div>
 	<br />
 
 	<input type="submit" name="submit" value="Change Password" style="height:10%; width:20%; background-color:black; color:white;">
