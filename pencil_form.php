@@ -59,7 +59,7 @@ else{
 ?>	<br/>
 	<center>
 	 <div style="background-color:#d6ccc2; width:50%; height:8%;" > 
-	 <font size="+3">YOUR ARE NOT LOGGED IN.</font>
+	 <font size="+3">YOU ARE NOT LOGGED IN.</font>
 	 </div>
 	 <br/>
 	 <div style="background-color:#ebfbff; width:50%; height:10%;" > 

@@ -56,11 +56,16 @@ if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] != 0)){
 <?php
 }
 else{
-?>
-	<h2>You are not logged in</h2>
-	<p>Hello. Since you are not logged in, you cannot view
-	protected content</p>
-	<p>But you can <a href="login.php">log in</a></p>
+?></br>
+	<center>
+	 <div style="background-color:#d6ccc2; width:50%; height:8%;" > 
+	 <font size="+3">YOU ARE NOT LOGGED IN.</font>
+	 </div>
+	 <br/>
+	 <div style="background-color:#ebfbff; width:50%; height:10%;" > 
+	 <font size="+2">You cannot view protected content. <br/>
+	 If you don't have an account please sign up.</font>
+	 </div>
 <?php
 }
 include("footer.inc");

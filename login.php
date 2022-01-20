@@ -7,8 +7,7 @@ session_start();
 </head>
 
 <body>
-<?php include("header.inc");?>   
-<?php
+<?php include("header.inc");
 	if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] == 0)){ ?>
 <center>	
 <div align=center style="background-color:black; width:50%; height:5%;" > 

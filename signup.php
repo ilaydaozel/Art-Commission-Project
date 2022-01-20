@@ -1,12 +1,17 @@
 <?php
    session_start();
-   #$_SESSION["Authenticated"] == 0;
+	$host= 'eu-cdbr-west-02.cleardb.net';
+	$username= 'b893d69c34f150';
+	$password= '551cfc91';
+
+	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
+
 ?>
 
 <html><head><title>Sign up</title>
 <body><div align="center">
-<?php include("header.inc");?>
-<?php
+<?php include("header.inc");
 
 $name="";
 $surname="";
@@ -30,12 +35,6 @@ if(isset($_REQUEST['submit'])){ // If the form was submitted
   if(count($errors) != 0){ // If there are errors,
 		display_form();}
   else{
-		$host= 'eu-cdbr-west-02.cleardb.net';
-		$username= 'b893d69c34f150';
-		$password= '551cfc91';
-
-		$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
-		mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 		mysqli_query( $con,"INSERT INTO information (name, surname, address, email, password) ". "VALUES ('$name', '$surname' , '$address', '$email', '$password') ");
 		echo "<h2> WELCOME TO ARTIYE ".$name." ".$surname."!";
@@ -59,8 +58,6 @@ function validate_input(){
 	$errors['email']="<font color='red' size='1px'> Please fill in the required information.</font>";
     }
   if($_POST['email'] != ""){
-	 $con = mysqli_connect("localhost", "root", "") or die ("Couldn't open connection");
-	 mysqli_select_db( $con, "customers" );
 	 $mail=$_POST['email'];
 	 $mail_check = mysqli_query($con, "SELECT * FROM information WHERE email='$mail'");	
 	if(mysqli_num_rows($mail_check) !=0){

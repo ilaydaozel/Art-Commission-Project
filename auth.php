@@ -11,6 +11,8 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 $user_check= mysqli_query($con, "SELECT * FROM information WHERE email='$email' and password='$password'");
 
+echo mysqli_num_rows($user_check);
+echo "aaa";
 if (isset($_POST["login"])){
 	if ((isset($_POST["email"])) && (isset($_POST["password"]) ) && mysqli_num_rows($user_check)){
 		$user_record = mysqli_fetch_row( $user_check );
