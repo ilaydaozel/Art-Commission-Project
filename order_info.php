@@ -27,9 +27,9 @@
 <body>
 <?php include("header.inc");?>
 
+<?php  if($orders){
+?>	
 <center>
-
-
 </br></br>
 <table border="4" bordercolor="black" cellpadding="20" width=100% align="center" > 
 <caption><font color="black" size=+3> MY ORDERS </font></caption>
@@ -55,12 +55,18 @@ foreach( $orders as $order){ ?>
 		<td><?php echo $order[10] ?></td>
 		</tr>
 <?php	}
+}
 ?>
-
 </table>
-
+<?php
+else{
+	?>
+	<div style="background-color:#ebfbff; width:50%; height:25%;" > 
+	 <font size="+2"> YOU DON'T HAVE ANY ORDERS <br /><br /></font>
+	</div>	
 	
-<?php include("footer.inc");?>
+<?php }
+include("footer.inc");?>
 
 </b>
 </body>

@@ -48,13 +48,13 @@ fclose($handle);
 
 <div  style="background-color:#d6ccc2; width:100%; height:20%;">
 <font color="black" size="+2">YOUR ORDER IS GOING TO BE SENT TO THIS ADDRESS:</font></br>
-<h2>
+
 <?php 
 	 $address_result = mysqli_query($con, "SELECT address FROM information WHERE id='$customer_id'");
 	 $row=mysqli_fetch_assoc($address_result);
 	 echo $row["address"];
 	 
-	 ?></h2>
+	 ?>
 	 If you want to update your address, you can go to <a style="color:black;" href="user_info.php">My Account >> User Information<a>.
 </div></br></br>
 
