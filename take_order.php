@@ -55,6 +55,7 @@ fclose($handle);
 	 echo $row["address"];
 	 
 	 ?>
+	 </br>
 	 If you want to update your address, you can go to <a style="color:black;" href="user_info.php">My Account >> User Information<a>.
 </div></br></br>
 
