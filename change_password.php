@@ -41,6 +41,8 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 				$user_array['password']=$new_password;
 				$_SESSION["Authenticated"]['password']=$new_password;
 				$new_password_message="<font size='2px'>Your password is successfully updated.</font>";
+				session_destroy();
+				header("Location: login.php");
 				}		
 		}
 	}	

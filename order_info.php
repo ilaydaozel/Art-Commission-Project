@@ -40,7 +40,6 @@
 <th>Person Amount</th>
 <th>Comment</th>
 <th>Price</th>
-<th>Address</th>
 </tr>
 
 <?php 
@@ -52,7 +51,6 @@ foreach( $orders as $order){ ?>
 		<td><?php echo $order[4] ?></td>
 		<td><?php echo $order[5] ?></td>
 		<td><?php echo $order[6] ?></td>
-		<td><?php echo $order[10] ?></td>
 		</tr>
 <?php	}
 ?>
