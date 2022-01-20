@@ -49,7 +49,7 @@ foreach( $orders as $order){ ?>
 		<td><?php echo $order[1] ?></td>
 		<td><img src="<?php echo $order[2] ?>" height="100px"></td>
 		<td><?php echo $order[3] ?></td>
-		<td><?php echo "order_photos/".$order[4] ?></td>
+		<td><?php echo "'order_photos/".$order[4]."'" ?></td>
 		<td><?php echo $order[5] ?></td>
 		<td><?php echo $order[6] ?></td>
 		<td><?php echo $order[10] ?></td>
