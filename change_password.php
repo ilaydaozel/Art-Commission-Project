@@ -23,7 +23,7 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 	if($_POST['old_password'] == ""){
-		$old_password_message="<font size='1px' color='red'>Please enter your password.</font>";}
+		$old_password_message="<font size='1px' color='red'>Please enter your old password.</font>";}
 		
 	else{
 		if(($_POST['new_password'] != "")&&(strlen($_POST['new_password'])<6)){
@@ -37,6 +37,8 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 				$old_password_message="<font size='1px' color='red'>Your old password is wrong. </font>";
 			}	
 			else{ 
+				 $old_password=$_POST['old_password'];
+				$new_password=$_POST['new_password'];
 				$password_update= mysqli_query($con, "UPDATE information SET password='$new_password' WHERE id='$user_id'");
 				$user_array['password']=$new_password;
 				$_SESSION["Authenticated"]['password']=$new_password;
