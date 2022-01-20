@@ -21,8 +21,13 @@ $customer_name=$order['customer_name'];
 $customer_surname=$order['customer_surname']; 
 $customer_address=$order['customer_address']; 
 $customer_email=$order['customer_email']; 
-$con = mysqli_connect("localhost", "root", "") or die ("Couldn't open connection");
-mysqli_select_db( $con, "customers" );
+
+$host= 'eu-cdbr-west-02.cleardb.net';
+$username= 'b893d69c34f150';
+$password= '551cfc91';
+
+$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 mysqli_query( $con,"INSERT INTO order_information (art_medium, photo, paper_size, person_amount, comment, price, customer_id, customer_name, customer_surname, customer_address, customer_email ) ". "VALUES ('$art_medium', '$photo' , '$paper_size', '$person_amount', '$comment', '$price', '$customer_id', '$customer_name','$customer_surname','$customer_address','$customer_email')");
 $handle=fopen("customer_orders.txt", "a");
 $order_line="Customer id:".$customer_id.", Customer name:".$customer_name.", Customer surname:".$customer_surname.", Customer address:".$customer_address.", Customer email:".$customer_email.", Medium:".$art_medium.", Photo:".$photo.", Paper size:".$paper_size.", Person amount:".$person_amount.", Comment:".$comment.", Price:".$price."\n";

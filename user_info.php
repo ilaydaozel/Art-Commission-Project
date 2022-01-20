@@ -15,9 +15,14 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
  $email_message="";
  $address_message="";
 
-  
- $con = mysqli_connect("localhost", "root", "") or die ("Couldn't open connection");
- mysqli_select_db( $con, "customers" );
+$host= 'eu-cdbr-west-02.cleardb.net';
+$username= 'b893d69c34f150';
+$password= '551cfc91';
+
+$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+mysqli_select_db( $con, "heroku_a4c26417a470e78" );
+
+
  $mail_check = mysqli_query($con, "SELECT * FROM information WHERE email='$new_email'");	
 	if(mysqli_num_rows($mail_check) !=0){
 		$email_message="<font color='red' size='1px'>Your e-mail can not be updated. This email is already in use.</font>";

@@ -1,3 +1,3 @@
 <?php
- echo "HEllo world"
+  header("Location: home.php");
  ?>

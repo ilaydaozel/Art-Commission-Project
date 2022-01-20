@@ -30,8 +30,13 @@ if(isset($_REQUEST['submit'])){ // If the form was submitted
   if(count($errors) != 0){ // If there are errors,
 		display_form();}
   else{
-		$con = mysqli_connect("localhost", "root", "") or die ("Couldn't open connection");
-		mysqli_select_db( $con, "customers" );
+		$host= 'eu-cdbr-west-02.cleardb.net';
+		$username= 'b893d69c34f150';
+		$password= '551cfc91';
+
+		$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+		mysqli_select_db( $con, "heroku_a4c26417a470e78" );
+
 		mysqli_query( $con,"INSERT INTO information (name, surname, address, email, password) ". "VALUES ('$name', '$surname' , '$address', '$email', '$password') ");
 		echo "<h2> WELCOME TO ARTIYE ".$name." ".$surname."!";
 		echo "<h2>YOU HAVE SUCCESSFULLY REGISTERED<h2/>";	
