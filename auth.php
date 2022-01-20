@@ -24,9 +24,4 @@ if (isset($_POST["login"])){
 	session_write_close();
 	header("Location: loggedin.php");
 	}
-
-	if (isset($_GET["logout"])){
-		session_destroy();
-		header("Location: login.php");
-	}
 ?>

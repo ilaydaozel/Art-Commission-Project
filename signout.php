@@ -20,7 +20,7 @@
 		$user_delete= mysqli_query($con, "DELETE FROM information WHERE id='$user_id'");
 		session_destroy();
 		mysqli_close($con);
-		header("Location: pencil_page.php");
+		header("Location: home_page.php");
 			
 }	
 ?>
