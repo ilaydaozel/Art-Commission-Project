@@ -3,12 +3,12 @@ session_start();
 
 extract($_REQUEST, EXTR_SKIP);
 
-$host= 'eu-cdbr-west-02.cleardb.net';
-$username= 'b893d69c34f150';
-$password= '551cfc91';
+	$host= 'eu-cdbr-west-02.cleardb.net';
+	$username= 'b893d69c34f150';
+	$password= '551cfc91';
 
-$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
-mysqli_select_db( $con, "heroku_a4c26417a470e78" );
+	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 $user_check= mysqli_query($con, "SELECT * FROM information WHERE email='$email' and password='$password'");
 
 if (isset($_POST["login"])){
@@ -23,5 +23,10 @@ if (isset($_POST["login"])){
 }
 	session_write_close();
 	header("Location: loggedin.php");
+	}
+
+	if (isset($_GET["logout"])){
+		session_destroy();
+		header("Location: login.php");
 	}
 ?>
