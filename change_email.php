@@ -41,7 +41,7 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 }?>
  
-<html><head><title>User Information</title>
+<html><head><title>Change E-mail</title>
 <body>
 <?php include("header.inc");?>
 <div align="center">
@@ -50,7 +50,7 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 	<br/>
 	<br />
 	<div style="background-color:#ebfbff; width:50%; height:15%;" > 
-	 <font size="+2"> USER	EMAIL:<textarea name="email" rows=1 cols=70><?php echo $user_array["email"]?></textarea></font>
+	 <font size="+2"> USER	E-MAIL:<textarea name="email" rows=1 cols=70><?php echo $user_array["email"]?></textarea></font>
 	<br />
 	<?php if ( isset($_POST['submit'])) echo $email_message; ?>
 	</div>

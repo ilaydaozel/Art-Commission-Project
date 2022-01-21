@@ -22,7 +22,7 @@
 
 	<br /><br/>
 		
-	<div style="background-color:#d6ccc2; width:50%; height:5%;" > 
+	<div style="background-color:#d6ccc2; width:50%; height:15%;" > 
 	 <font size="+2"> USER ADDRESS: <?php echo $user_array["address"];?></font>
 	 </div>
 

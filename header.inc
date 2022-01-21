@@ -1,6 +1,6 @@
 	<div>
-	<div style="background-color:#d6ccc2 ; " >
-
+	<div style="background-color:#d6ccc2; " >
+     <br/>
 	 <h4 align="right">	 
 	 <?php
 	 /*if ypu are logged in , then the website shows ypu log out and my account options.If you are not logged in then, the log in and sign up options are shown.*/
@@ -12,7 +12,7 @@
 			<a style="color:black" href="auth.php?logout">LOG OUT </a>
 		    &nbsp;&nbsp;|
 			&nbsp;
-			<a style="color:black"href="user_page.php">MY ACCOUNT</a>
+			<a style="color:black"href="my_account.php">MY ACCOUNT</a>
 		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		    
 	   <?php }

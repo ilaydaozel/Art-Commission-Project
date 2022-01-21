@@ -41,11 +41,11 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 }?>
  
-<html><head><title>User Information</title>
+<html><head><title>Change Address</title>
 <body>
 <?php include("header.inc");?>
 <div align="center">
-<h2 align= center> USER INFORMATION </h2>
+<h2 align= center> CHANGE ADDRESS</h2>
 
 	<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 	<br />
