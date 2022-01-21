@@ -14,17 +14,17 @@ require_once("library.php");
 <div  style="height:300px;">
  <br>
   <img src="pencil_oldman.jpg"  width="10%" > </img>
-  <img src="water_3.jpg"  width="10%"> </img>
+  <img src="water_3.jpg"  width="9%"> </img>
   <img src="pencil_girl.jpg"  width="10%"  > </img>
   <img src="water_1.jpg"  width="10%"  > </img>
   <img src="pencil_göktay.jpg" width="10%"   > </img>
-  <img src="water_2.jpg"  width="10%"  > </img>
+  <img src="water_2.jpg"  width="9%"  > </img>
   <img src="pencil_kid.jpg" width="10%"  > </img>
-  <img src="water_4.jpg" width=10% > </img>
-  <img src="pencil_tolga.jpg"  width=10% > </img>
+  <img src="water_4.jpg" width="10%" > </img>
+  <img src="pencil_tolga.jpg"  width="10%" > </img>
    
 
- <a style="color:black;" href="gallery.php"><b> GALLERY >> </b></a>
+ <a style="color:black;" href="gallery.php"><b>GALLERY > </b></a>
 </div>
 </br></br>
 

@@ -29,7 +29,6 @@
  	 <a href="home.php"><img src="logo.jpg" alt="logo" width="70" align="left"> </img></a>
 	 </br>
 	 <div >
-	 </br>
 	 &nbsp;&nbsp;&nbsp;
 	 <font size="6" style="bold" color="black">A</font>
 	 <font size="6" style="bold" color=#d6ccc2>R</font>
