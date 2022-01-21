@@ -1,5 +1,6 @@
 <?php
 session_start();
+//this library provides the calculate_price($person_amount, $paper_size, $art_medium) function
 require_once("library.php");
 ?>
 <html><head>

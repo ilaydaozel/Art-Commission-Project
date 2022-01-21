@@ -1,5 +1,6 @@
 <?php
    session_start();
+   //this library provides the calculate_price($person_amount, $paper_size, $art_medium) function
    include("library.php");
    $user=$_SESSION['Authenticated'];
 ?>
@@ -12,6 +13,7 @@
 	extract($_REQUEST, EXTR_SKIP);
 	$error_message=array();
 	if(isset($_REQUEST['submit'])){
+		//checks if all the fields are filled out. If not, saves the error messages for displayment.
 		if($_FILES['picture_file']['name']==""){
 			$error_message['picture']= "PLEASE UPLOAD A PHOTO!";
 		}
@@ -22,7 +24,8 @@
 			$error_message['person_amount']="PLEASE CHOOSE THE PERSON AMOUNT!";
 		}
 	}
- 
+    
+	//uploads the order image into project file and prints the image
 	if(!array_key_exists("picture",$error_message)){
 		$file_name=$_FILES['picture_file']['name'];
 		$directory='';
@@ -39,7 +42,7 @@
 <?php
     }
 	else{
-		echo "Couldn't upload the photo";
+		echo "Couldn't upload the photo. The error might be caused by the blank spaces in the name of the photo. Please rename the photo and try again. ";
 	}
 }?>
 </br>
@@ -87,13 +90,15 @@ foreach( $error_message as $error){?>
 <?php	}
 	$array_len=count($error_message);
 	if ($array_len ==0){ 
+	//calculate_price function is taken from library.php 
 	 $price=calculate_price($person_amount, $paper_size, "watercolor");
 	 $customer_id=$user['id'];
 	 $customer_name=$user['name'];
 	 $customer_surname=$user['surname'];
 	 $customer_address=$user['address'];
 	 $customer_email=$user['email'];
-	 $comment=trim(stripslashes($_POST['comment']));
+	 $comment=trim(addslashes($_POST['comment']));
+	 //if there are no errors, put the order informations in an array and assign the array to session[Order]
 	 $order=array("customer_id"=>$customer_id, "art_medium"=>'watercolor', "photo"=>$file_name, "paper_size"=>$paper_size, "person_amount"=>$person_amount, "comment"=>$comment, "price"=>$price, "customer_name"=>$customer_name, "customer_surname"=>$customer_surname, "customer_address"=>$customer_address,"customer_email"=>$customer_email);
 	 $_SESSION['Order']=$order;
 

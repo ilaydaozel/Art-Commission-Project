@@ -6,13 +6,14 @@
 	$host= 'eu-cdbr-west-02.cleardb.net';
 	$username= 'b893d69c34f150';
 	$password= '551cfc91';
-
+    
+	//checks if the user ordered something before 
 	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
 	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
  	$order_result= mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$customer_id'");
-
+    
 	$orders=array();
-
+    //if user has orders in the database, then add the order informations to the orders array
 	$i=0;
 	while ($row = mysqli_fetch_row($order_result)) {
 		$orders[$i]=$row;
@@ -44,6 +45,7 @@
 </tr>
 
 <?php 
+//show user orders in a table
 foreach( $orders as $order){ ?>
 		<tr>
 		<td><?php echo $order[1] ?></td>

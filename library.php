@@ -1,7 +1,9 @@
 <?php 
+
+//a function to return the price according to the person amount paper size and art medium
 function calculate_price($person_amount, $paper_size, $art_medium){
 	$price= 0;
-	
+	//pencil prices
 	if ($art_medium=="pencil"){
 		if($paper_size=="A4"){
 			if ($person_amount==1){
@@ -39,6 +41,7 @@ function calculate_price($person_amount, $paper_size, $art_medium){
 			}	
 		}
 	}
+	//watercolor prices
 	else if ($art_medium=="watercolor"){
 		if($paper_size=="A4"){
 			if ($person_amount==1){

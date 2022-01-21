@@ -1,5 +1,6 @@
 <?php
 session_start();
+//this page is a guide for users to reach to the link references below
 ?>
 <html><head>
 <title>User Page</title>

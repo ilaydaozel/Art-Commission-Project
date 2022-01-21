@@ -6,14 +6,13 @@
 
 <?php
 
-//kendi kendini process eden formlar, ayrıca bi php dosyası gerekmiyo
-	if (isset($_POST['submit'])){ // Was the form submitted?
+	if (isset($_POST['submit'])){ 
 		$user_id=$user_array['id'];
 
 		$host= 'eu-cdbr-west-02.cleardb.net';
 		$username= 'b893d69c34f150';
 		$password= '551cfc91';
-
+        //if user wants to sign out user's data is deleted from the database
 		$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
 		mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 

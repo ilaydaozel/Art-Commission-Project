@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("library.php");
+//this page showcases the photos
 ?>
 <html><head>
 <title>Pencil Portrait</title>
@@ -19,9 +20,6 @@ require_once("library.php");
  <img src="pencil_1.jpeg"  height="300" > </img>
  <img src="pencil_oldman.jpg"  height="300" > </img>
 
-
-
-
 </div>
 <hr/>
 
@@ -35,7 +33,6 @@ require_once("library.php");
  <img src="water_4.jpg"  height="300" > </img>
  <img src="water_6.jpg"  height="300" > </img>
  <img src="water_5.jpg"  height="300" > </img>
-
 </div>
 <hr/>
 

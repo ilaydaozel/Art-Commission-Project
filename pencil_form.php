@@ -4,8 +4,9 @@
 </title>
 </head>
 
-<body bgcolor= "white">
+<body >
 <?php include("header.inc");
+//if the user is logged in, enable the order form
 if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] != 0)){
 ?>
 <form enctype="multipart/form-data" action="pencil_order.php" method="POST">
@@ -55,6 +56,7 @@ if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] != 0)){
 </form>
 <?php
 }
+//if the user is not logged in, disable the order form
 else{
 ?>	<br/>
 	<center>

@@ -6,8 +6,8 @@
 
 <?php
 
-//kendi kendini process eden formlar, ayrıca bi php dosyası gerekmiyo
-if ( isset($_POST['submit'])){ // Was the form submitted?
+
+if ( isset($_POST['submit'])){ 
  $old_address=$user_array['address'];
  $user_id=$user_array['id'];
  $new_address=$_POST['address'];
@@ -24,27 +24,32 @@ mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 
  $mail_check = mysqli_query($con, "SELECT * FROM information WHERE email='$new_email'");	
+    //if email is taken by another user, then email can'be updated
 	if(mysqli_num_rows($mail_check) !=0){
 		$email_message="<font color='red' size='1px'>Your e-mail can not be updated. This email is already in use.</font>";
 	}	
 	else{ 
+	    //if new email is available, then update email in user database and if the user had ordered something before, update also in order database 
 		$mail_update= mysqli_query($con, "UPDATE information SET email='$new_email' WHERE id='$user_id'");
 		if(mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$user_id'")){
 			$order_mail_update= mysqli_query($con, "UPDATE order_information SET customer_email='$new_email' WHERE customer_id='$user_id'");
 		}
+		//also update in session data
 		$user_array['email']=$new_email;
 		$_SESSION["Authenticated"]['email']=$new_email;
 		$email_message="<font size='1px'> Successfully updated your e-mail. </font>";
 		}	
-		
+	//if there is no change in address, then don't update	
 	if($new_address==$old_address){
 		$address_message="<font size='1px'>There is no update in your address. </font>";
 	}	
 	else{ 
+	    //Update address in user database and if the user had ordered something before, update also in order database 
 		$address_update= mysqli_query($con, "UPDATE information SET address='$new_address' WHERE id='$user_id'");
 		if(mysqli_query($con, "SELECT * FROM order_information WHERE customer_id='$user_id'")){
 			$order_address_update= mysqli_query($con, "UPDATE order_information SET customer_address='$new_address' WHERE customer_id='$user_id'");
 		}
+		//also update in session data
 		$user_array['address']=$new_address;
 		$_SESSION["Authenticated"]['address']=$new_address;
 		$address_message="<font size='1px'>Successfully updated your address.</font>";

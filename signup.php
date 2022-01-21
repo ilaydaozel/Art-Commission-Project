@@ -1,11 +1,5 @@
 <?php
    session_start();
-	/*$host= 'eu-cdbr-west-02.cleardb.net';
-	$username= 'b893d69c34f150';
-	$password= '551cfc91';
-
-	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
-	mysqli_select_db( $con, "heroku_a4c26417a470e78" );*/
 
 ?>
 
@@ -19,26 +13,24 @@ $address="";
 $email="";
 $password="";
 extract($_REQUEST, EXTR_SKIP);
-$errors=array();
+$errors=array();  //initialize an errors array 
 if(isset($_REQUEST['submit'])){ // If the form was submitted
+//trims the message and add slashes if there is a ', done for the security reasons
   if(isset($_POST['name']) && $_POST['name'] != "") {
-    $name=trim(stripslashes($_POST['name'])); }
+    $name=trim(addslashes($_POST['name'])); }
   if(isset($_POST['surname']) && $_POST['surname'] != "") {
-    $surname = trim(stripslashes($_POST['surname'])); }
+    $surname = trim(addslashes($_POST['surname'])); }
   if(isset($_POST['address']) && $_POST['address'] != "") {
-    $address = trim(stripslashes($_POST['address'])); }
+    $address = trim(addslashes($_POST['address'])); }
   if(isset($_POST['email']) && $_POST['email'] != "") {
-    $email = trim(stripslashes($_POST['email'])); }
+    $email = trim(addslashes($_POST['email'])); }
   if(isset($_POST['password']) && $_POST['password'] != "") {
-    $password = trim(stripslashes($_POST['password'])); }	
+    $password = trim(addslashes($_POST['password'])); }	
   validate_input(); // Check for empty fields
-  if(count($errors) != 0){ // If there are errors,
+  if(count($errors) != 0){ // If there are errors, display form with the error messages
 		display_form();}
   else{
-	  /*
-	  	$con = mysqli_connect('localhost', 'root', '') or die ("Couldn't open connection");
-	    mysqli_select_db( $con, "customers" );
-*/
+	  //if there are no errors save user informations to database
 	$host= 'eu-cdbr-west-02.cleardb.net';
 	$username= 'b893d69c34f150';
 	$password= '551cfc91';
@@ -54,6 +46,7 @@ else{display_form();} // Display the form for the first time
 
 function validate_input(){
   global $errors;
+  //error messages that will appear
   if($_POST['name'] == ""){
      $errors['name']="<font color='red' size='1px'> Please fill in the required information.</font>";
 	}
@@ -68,13 +61,11 @@ function validate_input(){
     }
   if($_POST['email'] != ""){
 	 $mail=$_POST['email'];
-	/* $con = mysqli_connect('localhost', 'root', '') or die ("Couldn't open connection");
-     mysqli_select_db( $con, "customers" );*/
 
 	$host= 'eu-cdbr-west-02.cleardb.net';
 	$username= 'b893d69c34f150';
 	$password= '551cfc91';
-
+//checks if the email is given by another user before, since email is used as username, it should be unique for every user.
 	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
 	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 	 $mail_check = mysqli_query($con, "SELECT * FROM information WHERE email='$mail'");	
@@ -84,6 +75,7 @@ function validate_input(){
   if(($_POST['password'] == "")){
 	$errors['password']="<font color='red' size='1px'> Please fill in the required information.</font>";
     }	
+	//checks if the password requirement is met
    if(($_POST['password'] != "")&&(strlen($_POST['password'])<6)){
 	$errors['password']="<font color='red' size='1px'> The password length must be longer than 5 characters.</font>";
     }	

@@ -1,8 +1,10 @@
 	<div>
 	<div style="background-color:#d6ccc2 ; padding: 1px 2px 1px 2px; " >
 		
-	 <h4 align="right">	   
+	 <h4 align="right">	 
+	 <h6>instagram:@ilaydaozel.art tiktok:@ilaydaozel.art</h6>
 	 <?php
+	 /*if ypu are logged in , then the website shows ypu log out and my account options.If you are not logged in then, the log in and sign up options are shown.*/
 		if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] != 0)){
 			$user_array=$_SESSION["Authenticated"];
 			echo "Welcome ".$user_array["name"]." ".$user_array["surname"];
@@ -23,7 +25,7 @@
 	   <?php }?>
 	   </h4>
 	   </div>
-	
+	<--! You can click the logo to go to the homepage-->
 	<div style="padding: 10px 12px 10px 12px;">
  	 <a href="home.php"><img src="logo.jpg" alt="logo" width="70" align="left"> </img></a>
 	 

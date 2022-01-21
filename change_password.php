@@ -6,8 +6,7 @@
 
 <?php
 
-//kendi kendini process eden formlar, ayrıca bi php dosyası gerekmiyo
-if ( isset($_POST['submit'])){ // Was the form submitted?
+if ( isset($_POST['submit'])){ 
  $user_password=$user_array['password'];
  $old_password=$_POST['old_password'];
  $new_password=$_POST['new_password'];
@@ -21,11 +20,12 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 
 	$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
 	mysqli_select_db( $con, "heroku_a4c26417a470e78" );
-
+    //if old password is not entered
 	if($_POST['old_password'] == ""){
 		$old_password_message="<font size='1px' color='red'>Please enter your old password.</font>";}
-		
+	
 	else{
+		//if new password requirements are not met
 		if(($_POST['new_password'] != "")&&(strlen($_POST['new_password'])<6)){
 			$new_password_message="<font color='red' size='1px'> The password length must be longer than 5 characters.</font>";
 		}
@@ -33,10 +33,12 @@ if ( isset($_POST['submit'])){ // Was the form submitted?
 			$new_password_message="<font size='1px' color='red'>Enter a valid new password.</font>";
 		}
 		else{
+			//if old password doesn't match
 			if($user_password!=$old_password){
 				$old_password_message="<font size='1px' color='red'>Your old password is wrong. </font>";
 			}	
 			else{ 
+			     //update password
 				 $old_password=$_POST['old_password'];
 				$new_password=$_POST['new_password'];
 				$password_update= mysqli_query($con, "UPDATE information SET password='$new_password' WHERE id='$user_id'");

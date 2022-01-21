@@ -8,6 +8,7 @@ session_start();
 
 <body>
 <?php include("header.inc");
+#if user is could not be authenticated than wrong email message is sent.
 	if (isset($_SESSION["Authenticated"]) && ($_SESSION["Authenticated"] == 0)){ ?>
 <center>	
 <div align=center style="background-color:black; width:50%; height:5%;" > 
@@ -19,7 +20,7 @@ session_start();
 <center>
 <h2> LOG IN</h2>
 <form action="auth.php" method="post">
-	
+
 <div style="background-color:#d6ccc2; width:50%; height:12%;" > 
 <font size="+2"> E-MAIL:</font><br>
 <input type="email" name="email">
