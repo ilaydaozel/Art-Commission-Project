@@ -18,7 +18,11 @@ session_start();
 </div>
 </br>
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 
-<a href=change_password.php><font color="black" size="+3">CHANGE PASSWORD</font></h1></a>
+<a href=change_address.php><font color="black" size="+3">CHANGE ADDRESS</font></h1></a>
+</div>
+</br>
+<div style="background-color:#ebfbff; width:50%; height:7%;" > 
+<a href=change_email.php><font color="black" size="+3">CHANGE EMAIL</font></h1></a>
 </div>
 </br>
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 

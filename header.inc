@@ -1,6 +1,6 @@
 	<div>
-	<div style="background-color:#d6ccc2 ; padding: 1px 2px 1px 2px; " >
-	<h6 align="right">instagram:@ilaydaozel.art         tiktok:@ilaydaozel.art</h6>	
+	<div style="background-color:#d6ccc2 ; " >
+
 	 <h4 align="right">	 
 	 <?php
 	 /*if ypu are logged in , then the website shows ypu log out and my account options.If you are not logged in then, the log in and sign up options are shown.*/

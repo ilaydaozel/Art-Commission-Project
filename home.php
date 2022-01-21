@@ -13,20 +13,20 @@ require_once("library.php");
 		
 <div  style="height:300px;">
  <br>
-  <img src="pencil_oldman.jpg"  height="200" > </img>
- <img src="water_3.jpg"  height="200"> </img>
-  <img src="pencil_girl.jpg"  height="200" > </img>
- <img src="water_1.jpg"  height="200" > </img>
- <img src="pencil_göktay.jpg" height="200"  > </img>
-  <img src="water_2.jpg"  height="200" > </img>
- <img src="pencil_kid.jpg" height="200" > </img>
+  <img src="pencil_oldman.jpg"  height="20%" > </img>
+ <img src="water_3.jpg"  height="20%"> </img>
+  <img src="pencil_girl.jpg"  height="20%" > </img>
+ <img src="water_1.jpg"  height="20%" > </img>
+ <img src="pencil_göktay.jpg" height="20%"  > </img>
+  <img src="water_2.jpg"  height="20%" > </img>
+ <img src="pencil_kid.jpg" height="20%" > </img>
 
  <a style="color:black;" href="gallery.php"><b> GALLERY >> </b></a>
 </div>
 
 
 
-<div style="border: black; border-width:2px; border-style:solid; margin:10px;  float:right; width:30%; height:200px; padding: 20px;">
+<div style="background-color:#d6ccc2; float:right; width:40%; height:30%; ">
 <h2>
 		There are just 3 steps:</br>
 		<ol>
@@ -52,10 +52,10 @@ require_once("library.php");
 <br/>
 <br/></br>
 
-<div align="left" style="border:black; border-width:1px; border-style:solid; padding:10px; height:350px; ">
+<div align="left" style="background-color:#ebfbff; height:40%; ">
 <br/>
 <h2>  GET TO KNOW THE ARTIST</h2>
- <img align="left" src="artist.jpeg" alt="artist's photo" width="200" style="padding:20px" > </img>
+ <img align="left" src="artist.jpeg" alt="artist's photo" height="30%" > </img>
  <font size="+2" style="bold" >
  <p>
  My name is Ilayda Ozel. I am a student of the Izmır Instıtute of Technology in Izmir, Turkey. Currently I am in the 4th year of my bachelor's education. 
@@ -64,6 +64,10 @@ require_once("library.php");
  I love to create artworks through my emotions and thoughts, 
  so all of my artworks are a part of my inner world. I am so happy to be able to share a piece of me with you through this website.
  Thank you for supporting me.
+ </br>
+ If you would like to, you can check my social media accounts:</br>
+ instagram:@ilaydaozel.art</br>
+ tiktok:@ilaydaozel.art</br>
  </p>
  </font>
 </div>
@@ -77,22 +81,22 @@ require_once("library.php");
  1st Step= Preparation
  </br>
  </br>
- <img src="process2.jpeg"  height="300" > </img>
- <img src="process1.jpeg"  height="300" > </img>
+ <img src="process2.jpeg"  height="300px" > </img>
+ <img src="process1.jpeg"  height="300px" > </img>
  </br>
  </br>
   2nd Step= Packaging
   </br>
   </br>
- <img src="water_5.jpg"  height="400" > </img>
-  <img src="packaging.jpeg"  height="400" > </img>
+ <img src="water_5.jpg"  height="400px" > </img>
+  <img src="packaging.jpeg"  height="400px" > </img>
   </br>
   </br>
   3rd Step= Delivery and Happy Faces :)
   </br>
   </br>
- <img src="process3.jpeg"  height="500"> </img>
- <img src="process4.jpeg"  height="500" > </img>
+ <img src="process3.jpeg"  height="500px"> </img>
+ <img src="process4.jpeg"  height="500px" > </img>
 </h2>
 
 </div>
