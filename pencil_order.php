@@ -48,7 +48,7 @@
 	?>
 </br>
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 
-<font size="+3"> MEDIUM: Watercolor </font></br></br>
+<font size="+3"> MEDIUM: Pencil </font></br></br>
 </div>
 </br>
 <?php
@@ -72,7 +72,7 @@
 } 
 	if(isset($_POST['comment'])){
 ?>
-<div style="background-color:#ebfbff; width:50%; height:7%;" > 
+<div style="background-color:#ebfbff; width:50%; height:35%;" > 
 <font size="+3">  YOUR COMMENT: <?php echo $comment ;?> </font></br></br>
 </div>
 </br>

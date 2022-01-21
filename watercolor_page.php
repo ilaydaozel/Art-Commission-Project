@@ -14,7 +14,7 @@ require_once("library.php");
 
 
 <div style="background-color:#d6ccc2; float:right; width:30%; height:40%;">
-<h2>
+<h2><br/>
 		There are just 3 steps:</br>
 		<ol>
 		<li>Upload your image</br></li>
@@ -80,8 +80,6 @@ require_once("library.php");
 </td>
 </table>
 </br>
-
-
 
 
 <?php include("footer.inc");?>
