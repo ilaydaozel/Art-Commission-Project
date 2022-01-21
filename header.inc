@@ -23,9 +23,9 @@
 		   <a style="color:black" href="signup.php">SIGN UP</a>
 	   <?php }?>
 	   </h4>
-	   <br/>
 	   </div>
 	<div >
+	<br/>
  	 <a href="home.php"><img src="logo.jpg" alt="logo" width="70" align="left"> </img></a>
 	 </br>
 	 <div >

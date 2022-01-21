@@ -14,12 +14,15 @@ require_once("library.php");
 <div  style="height:300px;">
  <br>
   <img src="pencil_oldman.jpg"  width="10%" > </img>
- <img src="water_3.jpg"  width="10%"> </img>
+  <img src="water_3.jpg"  width="10%"> </img>
   <img src="pencil_girl.jpg"  width="10%"  > </img>
- <img src="water_1.jpg"  width="10%"  > </img>
- <img src="pencil_göktay.jpg" width="10%"   > </img>
+  <img src="water_1.jpg"  width="10%"  > </img>
+  <img src="pencil_göktay.jpg" width="10%"   > </img>
   <img src="water_2.jpg"  width="10%"  > </img>
- <img src="pencil_kid.jpg" width="10%"  > </img>
+  <img src="pencil_kid.jpg" width="10%"  > </img>
+  <img src="water_4.jpg" width=10% > </img>
+  <img src="pencil_tolga.jpg"  width=10% > </img>
+   
 
  <a style="color:black;" href="gallery.php"><b> GALLERY >> </b></a>
 </div>
@@ -28,6 +31,7 @@ require_once("library.php");
 
 <div style="background-color:#d6ccc2; float:right; width:50%; height:45%; ">
 <h2>
+<br/>
 		There are just 3 steps:</br>
 		<ol>
 		<li>Upload your image</br></li>
@@ -53,7 +57,7 @@ require_once("library.php");
 <div align="left" style="background-color:#ebfbff; height:70%; ">
 <br/>
 <h2>  GET TO KNOW THE ARTIST</h2>
- <img align="left" src="artist.jpeg" alt="artist's photo" height="60%" > </img>
+ <img align="left" src="artist.jpeg" alt="artist's photo" height="65%" > </img>
  <font size="+2" style="bold" >
  <p>
  My name is Ilayda Ozel. I am a student of the Izmır Instıtute of Technology in Izmir, Turkey. Currently I am in the 4th year of my bachelor's education. 
@@ -69,11 +73,10 @@ require_once("library.php");
  </p>
  </font>
 </div>
-</br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
 
 <div >
 <h2 align= center> MAKING OF AN ARTWORK </h2>
- <br>
  <h2>
  </br>
  1st Step= Preparation
