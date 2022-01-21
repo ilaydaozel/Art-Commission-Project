@@ -11,9 +11,9 @@
 
 		$host= 'eu-cdbr-west-02.cleardb.net';
 		$username= 'b893d69c34f150';
-		$password= '551cfc91';
+		$host_password= '551cfc91';
         //if user wants to sign out user's data is deleted from the database
-		$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+		$con = mysqli_connect($host, $username, $host_password) or die ("Couldn't open connection");
 		mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 
 		$user_delete= mysqli_query($con, "DELETE FROM information WHERE id='$user_id'");

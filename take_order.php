@@ -25,10 +25,10 @@ $customer_email=$order['customer_email'];
 
 $host= 'eu-cdbr-west-02.cleardb.net';
 $username= 'b893d69c34f150';
-$password= '551cfc91';
+$host_password= '551cfc91';
 
 //order informations are inserted into the database
-$con = mysqli_connect($host, $username, $password) or die ("Couldn't open connection");
+$con = mysqli_connect($host, $username, $host_password) or die ("Couldn't open connection");
 mysqli_select_db( $con, "heroku_a4c26417a470e78" );
 $clean_comment=mysqli_real_escape_string($con, $comment);
 mysqli_query( $con,"INSERT INTO order_information (art_medium, photo, paper_size, person_amount, comment, price, customer_id, customer_name, customer_surname, customer_address, customer_email ) ". "VALUES ('$art_medium', '$photo' , '$paper_size', '$person_amount', '$clean_comment', '$price', '$customer_id', '$customer_name','$customer_surname','$customer_address','$customer_email')");

@@ -13,7 +13,7 @@ require_once("library.php");
 <br/>
 
 
-<div style="border: black; border-width:2px; border-style:solid; margin:10px;  float:right; width:30%; height:200px; padding: 20px;">
+<div style="background-color:#d6ccc2; float:right; width:30%; height:40%;">
 <h2>
 		There are just 3 steps:</br>
 		<ol>

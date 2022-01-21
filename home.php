@@ -29,7 +29,7 @@ require_once("library.php");
 </br></br>
 
 
-<div style="background-color:#d6ccc2; float:right; width:50%; height:45%; ">
+<div style="background-color:#d6ccc2; float:right; width:50%; height:45%;">
 <h2>
 <br/>
 		There are just 3 steps:</br>
