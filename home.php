@@ -13,20 +13,20 @@ require_once("library.php");
 		
 <div  style="height:300px;">
  <br>
-  <img src="pencil_oldman.jpg"  width="15%" > </img>
- <img src="water_3.jpg"  width="15%"> </img>
-  <img src="pencil_girl.jpg"  width="15%"  > </img>
- <img src="water_1.jpg"  width="15%"  > </img>
- <img src="pencil_göktay.jpg" width="15%"   > </img>
-  <img src="water_2.jpg"  width="15%"  > </img>
- <img src="pencil_kid.jpg" width="15%"  > </img>
+  <img src="pencil_oldman.jpg"  width="10%" > </img>
+ <img src="water_3.jpg"  width="10%"> </img>
+  <img src="pencil_girl.jpg"  width="10%"  > </img>
+ <img src="water_1.jpg"  width="10%"  > </img>
+ <img src="pencil_göktay.jpg" width="10%"   > </img>
+  <img src="water_2.jpg"  width="10%"  > </img>
+ <img src="pencil_kid.jpg" width="10%"  > </img>
 
  <a style="color:black;" href="gallery.php"><b> GALLERY >> </b></a>
 </div>
+</br></br>
 
 
-
-<div style="background-color:#d6ccc2; float:right; width:50%; height:60%; ">
+<div style="background-color:#d6ccc2; float:right; width:50%; height:45%; ">
 <h2>
 		There are just 3 steps:</br>
 		<ol>
@@ -42,20 +42,18 @@ require_once("library.php");
 <align="right">
 <div style="background-color:black; width:32%; height:8%;"> <a  href=pencil_page.php> <font color="white" size="+3"> ORDER PENCIL PORTRAIT </font></a></div>
 
-</br>
-</br>
-</br>
-</br>
+</br></br></br></br>
+
 <div style="background-color:black; width:40%; height:8%;"> <a  href=watercolor_page.php> <font color="white" size="+3"> ORDER WATERCOLOR PORTRAIT </font></a></div>
 </align>
 <br/><br/><br/>
 <br/>
 <br/></br>
 
-<div align="left" style="background-color:#ebfbff; height:80%; ">
+<div align="left" style="background-color:#ebfbff; height:70%; ">
 <br/>
 <h2>  GET TO KNOW THE ARTIST</h2>
- <img align="left" src="artist.jpeg" alt="artist's photo" height="50%" > </img>
+ <img align="left" src="artist.jpeg" alt="artist's photo" height="60%" > </img>
  <font size="+2" style="bold" >
  <p>
  My name is Ilayda Ozel. I am a student of the Izmır Instıtute of Technology in Izmir, Turkey. Currently I am in the 4th year of my bachelor's education. 
@@ -71,7 +69,7 @@ require_once("library.php");
  </p>
  </font>
 </div>
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br>
 
 <div >
 <h2 align= center> MAKING OF AN ARTWORK </h2>

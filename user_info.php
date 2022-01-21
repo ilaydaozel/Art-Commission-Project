@@ -27,7 +27,7 @@
 	 </div>
 
 	<br/><br />
-	<div style="background-color:#d6ccc2; width:50%; height:5%;" > 
+	<div style="background-color:#d6ccc2; width:50%; height:10%;" > 
 	 <font size="+2"> USER EMAIL: <?php echo $user_array["email"];?></font>
 	 </div>
 	<?php include("footer.inc");?>

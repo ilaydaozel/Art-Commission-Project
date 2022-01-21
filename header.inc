@@ -23,10 +23,11 @@
 		   <a style="color:black" href="signup.php">SIGN UP</a>
 	   <?php }?>
 	   </h4>
+	   <br/>
 	   </div>
-	<div style="padding: 10px 12px 10px 12px;">
+	<div >
  	 <a href="home.php"><img src="logo.jpg" alt="logo" width="70" align="left"> </img></a>
-	 
+	 </br>
 	 <div >
 	 </br>
 	 &nbsp;&nbsp;&nbsp;
@@ -48,7 +49,7 @@
 	  <a style="color:black" href="gallery.php">GALLERY</a>
 	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 	  </font><br/></br></strong>
-	  
+	  </br>
 	  </div>
 </div>
 <hr> 
