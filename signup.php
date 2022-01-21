@@ -40,6 +40,7 @@ if(isset($_REQUEST['submit'])){ // If the form was submitted
 		mysqli_query( $con,"INSERT INTO information (name, surname, address, email, password) ". "VALUES ('$name', '$surname' , '$address', '$email', '$password') ");
 		echo "<h2> WELCOME TO ARTIYE ".$name." ".$surname."!";
 		echo "<h2>YOU HAVE SUCCESSFULLY REGISTERED<h2/>";	
+		echo "<h2>NOW YOU NEED TO LOG IN<h2/>";
 	}
 }
 else{display_form();} // Display the form for the first time

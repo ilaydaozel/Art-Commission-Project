@@ -62,7 +62,7 @@ fclose($handle);
 	 
 	 ?>
 	 </br>
-	 If you want to update your address, you can go to <a style="color:black;" href="user_info.php">My Account >> User Information<a>.
+	 If you want to update your address, you can go to <a style="color:black;" href="change_address.php">My Account >> Change Address<a>.
 </div></br></br>
 
 <div  style="background-color:#ebfbff; width:100%; height:30%;">
