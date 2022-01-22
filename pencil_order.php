@@ -28,7 +28,7 @@
 	//uploads the order image into project file and prints the image
 	if(!array_key_exists("picture",$error_message)){
 		$file_name=$_FILES['picture_file']['name'];
-		$directory='';
+		$directory='order_photos/';
 		$upload_file = $directory . $file_name;
 	
 		if (move_uploaded_file($_FILES['picture_file']['tmp_name'],$upload_file)){
@@ -37,7 +37,7 @@
 <div style="background-color:#ebfbff; width:50%; height:7%;" > 
 <font size="+3">UPLOADED PHOTO:</font></br></br></div>
 </br>
-<img src=<?php echo "'".$file_name."'";?> height="250px" ></img>
+<img src=<?php echo "'order_photos/".$file_name."'";?> height="250px" ></img>
 </br>
 <?php
     }
